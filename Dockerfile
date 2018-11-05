@@ -2,7 +2,7 @@ FROM ubuntu:14.04
 
 MAINTAINER Jay Luker <jay_luker@harvard.edu>
 
-ARG REVISION=master
+ARG REVISION=tags/release/2017-01-28.18
 ENV RAILS_ENV development
 ENV GEM_HOME /opt/canvas/.gems
 ENV YARN_VERSION 0.27.5-1
@@ -59,7 +59,7 @@ RUN sed -i "/^#listen_addresses/i listen_addresses='*'" /etc/postgresql/9.3/main
 RUN cd /opt/canvas \
     && git clone https://github.com/instructure/canvas-lms.git \
     && cd canvas-lms \
-    && git checkout $REVISION
+    && git checkout $REVISION -b stable
 
 WORKDIR /opt/canvas/canvas-lms
 
