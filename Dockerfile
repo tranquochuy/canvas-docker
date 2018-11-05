@@ -67,6 +67,7 @@ COPY assets/redis.yml config/redis.yml
 COPY assets/cache_store.yml config/cache_store.yml
 COPY assets/development-local.rb config/environments/development-local.rb
 COPY assets/outgoing_mail.yml config/outgoing_mail.yml
+COPY assets/domain.yml config/domain.yml
 
 RUN for config in amazon_s3 delayed_jobs domain file_store security external_migration \
        ; do cp config/$config.yml.example config/$config.yml \
