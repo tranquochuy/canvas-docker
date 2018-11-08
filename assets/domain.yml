@@ -2,7 +2,7 @@ test:
   domain: localhost
 
 development:
-  domain: "68.183.121.14"
+  domain: "localhost"
 
 production:
   domain: "canvas.example.com"
