@@ -45,7 +45,7 @@ RUN if [ -e /var/lib/gems/$RUBY_MAJOR.0/gems/bundler-* ]; then BUNDLER_INSTALL="
   && gem install bundler --no-document -v 1.15.2 \
   && chown -R canvasuser: $GEM_HOME
 
-#RUN gem install bundler --version 1.14.6
+RUN gem install bundler --version 1.14.6
 
 COPY assets/dbinit.sh /opt/canvas/dbinit.sh
 COPY assets/start.sh /opt/canvas/start.sh
