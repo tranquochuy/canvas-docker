@@ -73,7 +73,7 @@ RUN for config in amazon_s3 delayed_jobs domain file_store security external_mig
        ; do cp config/$config.yml.example config/$config.yml \
        ; done
 
-RUN gem update --system
+# RUN gem update --system
 
 RUN $GEM_HOME/bin/bundle install --jobs 8 --without="mysql"
 # RUN yarn install --pure-lockfile
