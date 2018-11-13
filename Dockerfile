@@ -58,7 +58,7 @@ RUN sed -i "/^#listen_addresses/i listen_addresses='*'" /etc/postgresql/9.5/main
 RUN cd /opt/canvas \
     && git clone https://github.com/instructure/canvas-lms.git \
     && cd canvas-lms \
-    && git checkout $REVISION -b stable
+    && git checkout $REVISION
 
 WORKDIR /opt/canvas/canvas-lms
 
