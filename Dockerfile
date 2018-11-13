@@ -12,7 +12,7 @@ RUN apt-get update \
     && apt-get -y install curl software-properties-common \
     && add-apt-repository -y ppa:brightbox/ruby-ng \
     && apt-get update \
-    && apt-get install -y ruby2.3 ruby2.3-dev supervisor redis-server \
+    && apt-get install -y ruby2.4 ruby2.4-dev supervisor redis-server \
         zlib1g-dev libxml2-dev libxslt1-dev libsqlite3-dev postgresql \
         postgresql-contrib libpq-dev libxmlsec1-dev curl make g++ git \
         unzip fontforge libicu-dev
