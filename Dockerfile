@@ -1,11 +1,11 @@
 FROM ubuntu:14.04
 
-MAINTAINER Jay Luker <jay_luker@harvard.edu>
+MAINTAINER Huy Tran <tqhuy07t2@gmail.com>
 
-ARG REVISION=tags/release/2017-01-28.18
+ARG REVISION=stable
 ENV RAILS_ENV development
 ENV GEM_HOME /opt/canvas/.gems
-ENV YARN_VERSION 0.27.5-1
+# ENV YARN_VERSION 0.27.5-1
 
 # add nodejs and recommended ruby repos
 RUN apt-get update \
@@ -17,7 +17,7 @@ RUN apt-get update \
         postgresql-contrib libpq-dev libxmlsec1-dev curl make g++ git \
         unzip fontforge libicu-dev
 
-RUN curl -sL https://deb.nodesource.com/setup_6.x | bash \
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash \
     && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
     && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
     && apt-get update \
